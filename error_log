@@ -1,0 +1,150 @@
+[24-Jun-2016 11:08:52 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 72 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3890
+[08-Jul-2016 01:05:59 UTC] PHP Warning:  POST Content-Length of 9854888 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[08-Jul-2016 01:06:40 UTC] PHP Warning:  POST Content-Length of 14396188 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[08-Jul-2016 01:07:43 UTC] PHP Warning:  POST Content-Length of 14396188 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[08-Jul-2016 01:07:43 UTC] PHP Warning:  POST Content-Length of 9854888 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[08-Jul-2016 23:48:43 America/Bogota] PHP Fatal error:  Cannot access private property PHPMailer::$to in /home/ofertohaggenit/public_html/system/control/mailing.php on line 295
+[08-Jul-2016 23:48:47 America/Bogota] PHP Fatal error:  Cannot access private property PHPMailer::$to in /home/ofertohaggenit/public_html/system/control/mailing.php on line 295
+[08-Jul-2016 23:48:50 America/Bogota] PHP Fatal error:  Cannot access private property PHPMailer::$to in /home/ofertohaggenit/public_html/system/control/mailing.php on line 295
+[08-Jul-2016 23:48:55 America/Bogota] PHP Fatal error:  Cannot access private property PHPMailer::$to in /home/ofertohaggenit/public_html/system/control/mailing.php on line 295
+[09-Jul-2016 00:39:53 America/Bogota] PHP Fatal error:  Cannot access private property PHPMailer::$to in /home/ofertohaggenit/public_html/system/control/mailing.php on line 295
+[22-Jul-2016 23:02:52 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 32 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3890
+[22-Jul-2016 23:05:52 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 32 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3890
+[28-Jul-2016 17:23:40 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 32 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3890
+[28-Jul-2016 17:31:45 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 32 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3890
+[28-Jul-2016 17:33:02 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 32 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3890
+[03-Aug-2016 02:02:01 UTC] PHP Warning:  POST Content-Length of 171654181 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[03-Aug-2016 02:02:07 UTC] PHP Warning:  POST Content-Length of 171654181 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[03-Aug-2016 02:02:24 UTC] PHP Warning:  POST Content-Length of 171654181 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[08-Aug-2016 15:16:27 UTC] PHP Warning:  POST Content-Length of 14461748 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[08-Aug-2016 15:17:39 UTC] PHP Warning:  POST Content-Length of 9326047 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[08-Aug-2016 15:17:39 UTC] PHP Warning:  POST Content-Length of 8990590 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[08-Aug-2016 15:32:04 UTC] PHP Warning:  POST Content-Length of 14461748 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[08-Aug-2016 15:34:39 UTC] PHP Warning:  POST Content-Length of 8990590 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[08-Aug-2016 15:34:39 UTC] PHP Warning:  POST Content-Length of 8879006 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[08-Aug-2016 15:34:39 UTC] PHP Warning:  POST Content-Length of 8949123 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[08-Aug-2016 15:38:56 UTC] PHP Warning:  POST Content-Length of 9057969 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[10-Aug-2016 21:41:30 UTC] PHP Warning:  POST Content-Length of 20052083 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[18-Aug-2016 22:07:18 UTC] PHP Warning:  POST Content-Length of 42849378 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[18-Aug-2016 22:21:44 UTC] PHP Warning:  POST Content-Length of 42849378 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[23-Aug-2016 14:24:27 UTC] PHP Warning:  POST Content-Length of 18314295 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[23-Aug-2016 14:26:05 UTC] PHP Warning:  POST Content-Length of 18314295 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[23-Aug-2016 14:38:23 UTC] PHP Warning:  POST Content-Length of 18314295 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[23-Aug-2016 14:40:38 UTC] PHP Warning:  POST Content-Length of 18314295 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[23-Aug-2016 21:39:00 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 70 bytes) in /home/ofertohaggenit/public_html/system/model/productos.class.php on line 155
+[23-Aug-2016 21:39:03 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 3 bytes) in /home/ofertohaggenit/public_html/system/model/productos.class.php on line 155
+[23-Aug-2016 21:39:41 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 70 bytes) in /home/ofertohaggenit/public_html/system/model/productos.class.php on line 155
+[23-Aug-2016 21:40:41 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 124 bytes) in /home/ofertohaggenit/public_html/system/model/productos.class.php on line 155
+[23-Aug-2016 21:40:44 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 124 bytes) in /home/ofertohaggenit/public_html/system/model/productos.class.php on line 155
+[25-Aug-2016 19:06:07 UTC] PHP Warning:  POST Content-Length of 14595651 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[25-Aug-2016 19:29:46 UTC] PHP Warning:  POST Content-Length of 8497367 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[25-Aug-2016 22:09:50 UTC] PHP Warning:  POST Content-Length of 11665699 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[25-Aug-2016 22:24:01 UTC] PHP Warning:  POST Content-Length of 14595651 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[25-Aug-2016 22:24:06 UTC] PHP Warning:  POST Content-Length of 13617216 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[25-Aug-2016 22:34:39 UTC] PHP Warning:  POST Content-Length of 14595651 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[25-Aug-2016 22:36:49 UTC] PHP Warning:  POST Content-Length of 8497367 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[27-Aug-2016 07:13:13 UTC] PHP Warning:  POST Content-Length of 9562946 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[27-Aug-2016 07:13:13 UTC] PHP Warning:  POST Content-Length of 9156324 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[27-Aug-2016 07:16:27 UTC] PHP Warning:  POST Content-Length of 9562946 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[27-Aug-2016 07:16:30 UTC] PHP Warning:  POST Content-Length of 9156324 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[27-Aug-2016 07:24:04 UTC] PHP Warning:  POST Content-Length of 9156324 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[27-Aug-2016 19:17:27 UTC] PHP Warning:  POST Content-Length of 9562946 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[27-Aug-2016 19:17:27 UTC] PHP Warning:  POST Content-Length of 9156324 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[27-Aug-2016 19:28:56 UTC] PHP Warning:  POST Content-Length of 9562946 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[27-Aug-2016 19:28:56 UTC] PHP Warning:  POST Content-Length of 9156324 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[27-Aug-2016 19:44:40 UTC] PHP Warning:  POST Content-Length of 9156324 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[27-Aug-2016 19:48:01 UTC] PHP Warning:  POST Content-Length of 9562946 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[27-Aug-2016 19:48:12 UTC] PHP Warning:  POST Content-Length of 9562946 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[29-Aug-2016 00:13:17 UTC] PHP Warning:  POST Content-Length of 13394370 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[29-Aug-2016 00:13:56 UTC] PHP Warning:  POST Content-Length of 12660801 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[29-Aug-2016 01:06:12 UTC] PHP Warning:  POST Content-Length of 16145438 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[29-Aug-2016 01:33:39 UTC] PHP Warning:  POST Content-Length of 10528686 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[29-Aug-2016 03:54:22 UTC] PHP Warning:  POST Content-Length of 8551185 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[29-Aug-2016 03:54:25 UTC] PHP Warning:  POST Content-Length of 12218250 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[30-Aug-2016 11:56:17 UTC] PHP Warning:  POST Content-Length of 8408302 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[05-Sep-2016 16:20:18 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 4096 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3891
+[05-Sep-2016 16:23:00 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 4096 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3891
+[05-Sep-2016 16:24:04 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 4096 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3891
+[06-Sep-2016 04:24:53 UTC] PHP Warning:  POST Content-Length of 11722568 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[06-Sep-2016 18:32:14 UTC] PHP Warning:  POST Content-Length of 16146416 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[07-Sep-2016 17:36:03 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 4096 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3891
+[12-Sep-2016 09:54:50 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 2464 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 2402
+[13-Sep-2016 17:32:11 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 32 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3890
+[16-Sep-2016 11:29:39 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 72 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3890
+[19-Sep-2016 16:32:45 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 72 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3890
+[19-Sep-2016 16:44:13 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 4096 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3891
+[20-Sep-2016 02:06:28 UTC] PHP Warning:  POST Content-Length of 13106145 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[20-Sep-2016 02:21:41 UTC] PHP Warning:  POST Content-Length of 11457667 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[20-Sep-2016 02:58:27 UTC] PHP Warning:  POST Content-Length of 10865601 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[20-Sep-2016 02:58:56 UTC] PHP Warning:  POST Content-Length of 10865601 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[20-Sep-2016 03:01:46 UTC] PHP Warning:  POST Content-Length of 10865601 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[24-Sep-2016 10:15:52 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 72 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3890
+[24-Sep-2016 10:15:57 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 72 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3890
+[24-Sep-2016 10:16:03 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 72 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3890
+[24-Sep-2016 10:16:09 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 72 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3890
+[24-Sep-2016 10:16:11 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 72 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3890
+[24-Sep-2016 10:16:14 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 72 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3890
+[24-Sep-2016 10:16:16 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 72 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3890
+[24-Sep-2016 10:16:18 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 72 bytes) in /home/ofertohaggenit/public_html/system/model/images.class.php on line 3890
+[30-Sep-2016 09:36:11 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 3330 bytes) in /home/ofertohaggenit/public_html/system/model/productos.class.php on line 155
+[30-Sep-2016 09:36:19 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 3330 bytes) in /home/ofertohaggenit/public_html/system/model/productos.class.php on line 155
+[30-Sep-2016 09:39:53 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 11 bytes) in /home/ofertohaggenit/public_html/system/model/productos.class.php on line 155
+[30-Sep-2016 09:40:10 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 1697 bytes) in /home/ofertohaggenit/public_html/system/model/productos.class.php on line 155
+[30-Sep-2016 17:23:12 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 11 bytes) in /home/ofertohaggenit/public_html/system/model/productos.class.php on line 155
+[30-Sep-2016 17:23:19 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 2 bytes) in /home/ofertohaggenit/public_html/system/model/productos.class.php on line 155
+[03-Oct-2016 22:17:10 UTC] PHP Warning:  POST Content-Length of 11837194 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[24-Nov-2016 03:17:42 America/Bogota] PHP Warning:  Unknown: write failed: No space left on device (28) in Unknown on line 0
+[24-Nov-2016 03:17:42 America/Bogota] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0
+[24-Nov-2016 03:18:16 America/Bogota] PHP Warning:  Unknown: write failed: No space left on device (28) in Unknown on line 0
+[24-Nov-2016 03:18:16 America/Bogota] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0
+[24-Nov-2016 09:05:31 America/Bogota] PHP Fatal error:  El script [12-Jan-2017 05:07:28 America/Bogota] PHP Parse error:  syntax error, unexpected ' guardar', expecting identifier (T_STRING) in /home/ofertohaggenit/public_html/system/model/productos.class.php on line 774
+[12-Jan-2017 05:46:32 America/Bogota] PHP Fatal error:  Class 'Productos' not found in /home/ofertohaggenit/public_html/system/control/main.php on line 127
+[10-Feb-2017 17:20:55 America/Bogota] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 10319 bytes) in /home/ofertohaggenit/public_html/system/model/productos.class.php on line 155
+[24-Apr-2017 08:09:36 America/Bogota] PHP Fatal error:  Out of memory (allocated 1572864) (tried to allocate 49152 bytes) in /home/ofertohaggenit/public_html/system/control/empresa.php on line 169
+[18-May-2017 20:39:36 UTC] PHP Warning:  POST Content-Length of 12885869 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[23-May-2017 13:22:36 UTC] PHP Warning:  POST Content-Length of 10200254 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[24-May-2017 16:04:24 UTC] PHP Warning:  POST Content-Length of 8828655 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[24-May-2017 16:05:00 UTC] PHP Warning:  POST Content-Length of 8828655 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[24-May-2017 16:31:56 UTC] PHP Warning:  POST Content-Length of 9255736 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[24-May-2017 19:30:30 UTC] PHP Warning:  POST Content-Length of 8495922 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[24-May-2017 19:30:54 UTC] PHP Warning:  POST Content-Length of 9255736 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[24-May-2017 20:20:11 UTC] PHP Warning:  POST Content-Length of 9808608 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[24-May-2017 20:59:05 UTC] PHP Warning:  POST Content-Length of 8626122 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[24-May-2017 21:00:15 UTC] PHP Warning:  POST Content-Length of 10087477 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[24-May-2017 21:00:45 UTC] PHP Warning:  POST Content-Length of 9811961 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[24-May-2017 21:01:01 UTC] PHP Warning:  POST Content-Length of 8711829 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[24-May-2017 21:51:29 UTC] PHP Warning:  POST Content-Length of 9363924 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[24-May-2017 22:08:27 UTC] PHP Warning:  POST Content-Length of 14057956 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[25-May-2017 00:16:59 UTC] PHP Warning:  POST Content-Length of 9766364 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[25-May-2017 00:27:10 UTC] PHP Warning:  POST Content-Length of 9363924 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[27-May-2017 20:15:05 America/Bogota] PHP Fatal error:  Out of memory (allocated 524288) (tried to allocate 49152 bytes) in /home/ofertohaggenit/public_html/system/lib/RI_input.php on line 773
+[27-May-2017 20:15:06 America/Bogota] PHP Fatal error:  Out of memory (allocated 1310720) (tried to allocate 576 bytes) in /home/ofertohaggenit/public_html/system/lib/db.php on line 63
+[27-May-2017 20:15:06 America/Bogota] PHP Fatal error:  Out of memory (allocated 1310720) (tried to allocate 4896 bytes) in /home/ofertohaggenit/public_html/system/lib/db.php on line 63
+[29-May-2017 03:05:26 UTC] PHP Warning:  POST Content-Length of 8626122 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[29-May-2017 03:46:08 UTC] PHP Warning:  POST Content-Length of 9808608 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[29-May-2017 03:54:07 UTC] PHP Warning:  POST Content-Length of 9808608 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[29-May-2017 04:02:17 UTC] PHP Warning:  POST Content-Length of 10027278 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[29-May-2017 04:02:17 UTC] PHP Warning:  POST Content-Length of 9478965 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[29-May-2017 04:02:17 UTC] PHP Warning:  POST Content-Length of 10396915 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[29-May-2017 04:16:57 UTC] PHP Warning:  POST Content-Length of 10396915 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[29-May-2017 16:23:20 UTC] PHP Warning:  POST Content-Length of 9808608 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[29-May-2017 20:31:13 UTC] PHP Fatal error:  Out of memory (allocated 262144) (tried to allocate 49152 bytes) in /home/ofertohaggenit/public_html/system/lib/startup.php on line 108
+[29-May-2017 17:50:10 America/Bogota] PHP Fatal error:  Out of memory (allocated 1310720) (tried to allocate 12288 bytes) in /home/ofertohaggenit/public_html/system/model/galerias.class.php on line 200
+[30-May-2017 00:10:13 UTC] PHP Warning:  POST Content-Length of 17337229 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[30-May-2017 00:10:13 UTC] PHP Warning:  POST Content-Length of 14775558 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[30-May-2017 00:10:13 UTC] PHP Warning:  POST Content-Length of 13291928 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[30-May-2017 00:10:13 UTC] PHP Warning:  POST Content-Length of 17020560 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[30-May-2017 00:10:13 UTC] PHP Warning:  POST Content-Length of 17301506 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[30-May-2017 00:10:13 UTC] PHP Warning:  POST Content-Length of 11181626 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[01-Jun-2017 16:08:03 UTC] PHP Warning:  POST Content-Length of 16396716 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[01-Jun-2017 16:16:26 UTC] PHP Warning:  POST Content-Length of 15608824 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[01-Jun-2017 16:16:26 UTC] PHP Warning:  POST Content-Length of 15546084 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[01-Jun-2017 16:16:26 UTC] PHP Warning:  POST Content-Length of 15686877 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[01-Jun-2017 16:16:26 UTC] PHP Warning:  POST Content-Length of 15948978 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[01-Jun-2017 16:16:28 UTC] PHP Warning:  POST Content-Length of 17969353 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[01-Jun-2017 16:16:28 UTC] PHP Warning:  POST Content-Length of 17015206 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[01-Jun-2017 16:16:28 UTC] PHP Warning:  POST Content-Length of 16837622 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[01-Jun-2017 16:17:59 UTC] PHP Warning:  POST Content-Length of 16596789 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[01-Jun-2017 17:05:35 UTC] PHP Warning:  POST Content-Length of 15608824 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[01-Jun-2017 17:05:35 UTC] PHP Warning:  POST Content-Length of 15501223 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[01-Jun-2017 21:49:58 UTC] PHP Warning:  POST Content-Length of 16384785 bytes exceeds the limit of 8388608 bytes in Unknown on line 0

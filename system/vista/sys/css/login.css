@@ -1,0 +1,101 @@
+body {
+	background-color: #999;
+}
+form {
+	margin: 0px;
+	padding: 0px;
+}
+#L_area {
+	width: 390px;
+	margin-top: 110px;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	background-image: url(../images/bg.png);
+	background-repeat: no-repeat;
+	height: 414px;
+	text-align: center;
+}
+#L_area .cont {
+	padding-top: 40px;
+	padding-right: 20px;
+	padding-bottom: 6px;
+	padding-left: 20px;
+}
+#L_area .cont .tt1 {
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #FFF;
+}
+#L_area .cont .tt2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 28px;
+	font-weight: bold;
+	color: #FFF;
+	margin-bottom: 40px;
+}
+#L_area .cont .logs {
+	text-align: left;
+	padding: 1px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FFF;
+	font-weight: bold;
+}
+#L_area .cont .logs #user {
+	border: 2px solid #4883B7;
+	padding-top: 4px;
+	padding-bottom: 1px;
+	width: 90%;
+	background-image: url(../images/user_16.png);
+	background-repeat: no-repeat;
+	background-position: 4px center;
+	background-color: #FFF;
+	height: 22px;
+	padding-left: 28px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #666;
+}
+#L_area .cont .logs #password {
+	border: 2px solid #4883B7;
+	padding-top: 4px;
+	padding-bottom: 1px;
+	width: 90%;
+	background-color: #FFF;
+	background-image: url(../images/ulock_16.png);
+	background-repeat: no-repeat;
+	background-position: 4px center;
+	height: 22px;
+	padding-left: 28px;
+	font-size: 16px;
+	color: #666;
+}
+
+#L_area .cont .logs #code {
+	border: 2px solid #4883B7;
+	padding-top: 4px;
+	padding-bottom: 1px;
+	width: 30%;
+	background-color: #FFF;
+	height: 17px;
+	padding-left: 2px;
+	font-size: 16px;
+	color: #666;
+}
+
+.imgcode {
+	margin-top: 10px;
+
+}
+
+#L_area .cont .logs .rr {
+	margin-bottom: 2px;
+	padding-top: 2px;
+	padding-right: 1px;
+	padding-bottom: 2px;
+	padding-left: 1px;
+	color: #FFF;
+	font-size:12px;
+}

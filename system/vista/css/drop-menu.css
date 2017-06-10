@@ -1,0 +1,158 @@
+@charset "UTF-8";
+/* CSS Document */
+/* el menú es una lista */
+ul#nav {
+	line-height: 100%;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+ul#nav li { /* cada item de esa lista */
+	display: inline-block;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+
+}
+/* las definiciones del Nivel Principal */
+ul#nav  a {
+	color: #5d626c;
+	display: block;
+	margin: 0;
+	text-decoration: none;
+	font-size: 15px;
+	padding: 15px 13px 18px 13px;
+	text-align: center;
+	font-weight: 400;
+	background-image: url('../images/mline.png');
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* efecto hover en el Nivel Principal */
+ul#nav .current a, #nav li:hover > a {
+	color: #E9318A;
+	
+}
+/* los subniveles */
+ul#nav ul li:hover a, #nav li:hover li a {
+	background: none;
+	border: none;
+	color: #FFF; 
+}
+ul#nav ul a:hover {
+	color: #FF9 !important;
+}
+
+/* el efecto de desplegar */
+ul#nav li:hover > ul {
+  display: block;
+  opacity:1;
+  visibility: visible;
+}
+
+/* las definiciones de los submenues */
+ul#nav ul {
+	opacity: 0;
+	visibility: hidden;
+	left: -4px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 47px;
+	width: 185px;
+	z-index:9;
+	opacity:0;
+    transition:opacity 0.2s linear;
+}
+ul#nav ul.right-menu{
+	left: -110px;
+	text-align: right;
+}
+ul#nav ul.right-menu:after{
+	left: 80%;
+}
+ul#nav ul:after {
+	bottom: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-bottom-color: #000000;
+	border-width: 6px;
+	left: 20%;
+	margin-left: -6px;
+}
+ul#nav ul li {
+	float: left;
+	width: 186px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color: #000000;
+}
+ul#nav  ul li:first-child{
+	border-top-left-radius:0px;
+	border-top-right-radius:0px;
+}
+ul#nav ul li:last-child{
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+}
+
+ul#nav ul a {
+	font-weight: normal;
+	font-size: 14px;
+	text-align: left;
+	padding-top: 12px;
+	padding-right: 12px;
+	padding-bottom: 12px;
+	padding-left: 16px;
+	text-shadow:none;
+	font-weight: 300;
+	font-family: 'Roboto', sans-serif;
+}
+
+/* las definiciones de los submenues internos */
+ul#nav ul ul {
+  left: 180px;
+  top: 0px;
+  z-index:-1;
+}
+
+ul#nav ul ul:after {
+	border: transparent;
+}
+
+/* bordes redondeados del primer y  último item */
+ul#nav ul li:nth-child(odd){ /* zebra stripes */
+	background-color: #191919;
+}
+ul#nav ul li:last-child > a {
+ 
+}
+
+/* definiciones generales */
+ul#nav:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+ul#nav { 
+	display: inline-block; 
+}
+
+
+@media screen and (max-width: 640px) {
+
+
+
+}

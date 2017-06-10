@@ -1,0 +1,16 @@
+.top-switch-bg,button.button span, .products-grid .hover .price-box,.cart-top > a ,.cart-top-container .details-border {background-color: #E63A3A;}
+
+.cart-top-container .details-border:before {border-bottom-color: #E63A3A;}
+.block,.cart .cart-collaterals .cart-block,#queldoreiNav > li > a:hover > span, 
+#queldoreiNav > li.over > a > span, #queldoreiNav > li.active > a > span,.cms-index-index .block  {border-top-color: #E63A3A;}
+.footer-info a {color: #E63A3A}
+
+
+.btn-remove, .btn-edit, #toTop,.footer-info ul.social li a:hover,button.invert:hover span, 
+button.btn-continue:hover span, .cart-shipping button:hover span, .cart-coupon button:hover span,
+.products-grid .hover .button-container button.button span span em,.jcarousel-next-horizontal:hover,
+.jcarousel-prev-horizontal:hover,.data-table .btn-remove2,.flex-control-paging li a.flex-active,.flex-control-paging li a:hover{background-color: #d26a6a;}
+
+.toolbar-dropdown ul li a:hover, .toolbar-dropdown ul li.selected a { text-decoration:none; color:#d26a6a;}
+.pager .pages .current,.pager .pages li a:hover {color: #d26a6a;}
+.product-tabs li.active {border-top-color: #d26a6a;}

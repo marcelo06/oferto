@@ -1,0 +1,21 @@
+CKEDITOR.plugins.setLang('youtube', 'es', {
+	button : 'Insertar video Youtube',
+	title : 'Insertar video Youtube',
+	txtEmbed : 'Pegue Código de Inserción aquí',
+	txtUrl : 'Peque la URL del video Youtube',
+	txtWidth : 'Ancho',
+	txtHeight : 'Alto',
+	chkRelated : 'Mostrar videos sugeridos al final del video',
+	txtStartAt : 'Comenzar en (ss or mm:ss or hh:mm:ss)',
+	chkPrivacy : 'Activar el modo de privacidad mejorada',
+	chkOlderCode : 'Use código de inserción antiguo',
+	noCode : 'Debe ingresar un código de inserción o URL',
+	invalidEmbed : 'El código de inserción que has introducido no parece ser válido',
+	invalidUrl : 'La URL que has introducido no parece ser válida',
+	or : 'o',
+	noWidth : 'Usted debe informar la anchura',
+	invalidWidth : 'Informar un ancho válido',
+	noHeight : 'Usted debe informar la altura',
+	invalidHeight : 'Informar una altura válida',
+	invalidTime : 'Informar un tiempo de inicio válido'
+});

@@ -1,0 +1,623 @@
+[09-May-2016 04:10:44 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.id_producto from productos p  
+        left join core_empresas e on p.id_empresa=e.id_empresa 
+        left join producto_keywords k on k.id_producto=p.id_producto
+        left join almacen_productos ap on ap.id_producto=p.id_producto 
+        left join almacenes a on ap.id_almacen = a.id_almacen  
+        where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si'  and a.id_pais=undefined and a.id_dpto=2 and a.id_ciudad=7   group by p.id_producto : Unknown column 'undefined' in 'where clause' in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[09-May-2016 04:10:46 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select c.id_categoria,c.categoria, count(DISTINCT p.id_producto) as cantidad from  core_categorias  c join core_empresas  e on e.id_categoria=c.id_categoria left join productos p on p.id_empresa=e.id_empresa  left join almacen_productos ap on ap.id_producto=p.id_producto left join almacenes a on ap.id_almacen = a.id_almacen where  borrado='0' and p.estado&lt;&gt;'Inactivo' and oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and oferta_aprobada='Si'  and a.id_pais=undefined and a.id_dpto=2 and a.id_ciudad=7 group by c.id_categoria order by categoria : Unknown column 'undefined' in 'where clause' in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[12-May-2016 03:41:42 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0   group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[13-May-2016 13:56:13 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[15-May-2016 05:09:37 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[17-May-2016 03:10:32 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1 and a.id_ciudad=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[17-May-2016 23:57:48 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1 and a.id_ciudad=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[18-May-2016 16:39:52 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[28-May-2016 23:17:15 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[05-Jun-2016 18:36:33 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1 and a.id_ciudad=8  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[12-Jun-2016 03:43:24 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[12-Jun-2016 22:20:22 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1 and a.id_ciudad=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[14-Jun-2016 14:49:38 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[14-Jun-2016 14:49:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[14-Jun-2016 14:49:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[14-Jun-2016 14:49:39 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[14-Jun-2016 14:49:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[14-Jun-2016 14:49:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[14-Jun-2016 14:50:01 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[14-Jun-2016 14:50:01 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[14-Jun-2016 14:50:01 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[14-Jun-2016 14:50:31 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[14-Jun-2016 14:50:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[14-Jun-2016 14:50:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[14-Jun-2016 14:50:54 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[14-Jun-2016 14:50:54 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[14-Jun-2016 14:50:54 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[14-Jun-2016 14:51:10 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[14-Jun-2016 14:51:10 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[14-Jun-2016 14:51:10 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[14-Jun-2016 14:51:11 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[14-Jun-2016 14:51:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[14-Jun-2016 14:51:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[15-Jun-2016 14:38:05 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0   group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[17-Jun-2016 19:39:47 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0   group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[17-Jun-2016 19:43:00 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0   group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[29-Jun-2016 00:59:59 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[03-Jul-2016 17:22:29 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[05-Jul-2016 00:09:06 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[05-Jul-2016 00:09:06 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[05-Jul-2016 00:09:06 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[07-Jul-2016 12:38:55 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1 and a.id_ciudad=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[07-Jul-2016 12:40:06 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1 and a.id_ciudad=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[08-Jul-2016 08:17:25 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[08-Jul-2016 08:17:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[08-Jul-2016 08:17:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[10-Jul-2016 07:46:20 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[10-Jul-2016 07:46:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[10-Jul-2016 07:46:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[19-Jul-2016 21:33:59 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[21-Jul-2016 19:50:14 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select * FROM keywords where keyword RLIKE '[[:&lt;:]]1+++++++.'  order by keyword,id_keyword  : Got error 'repetition-operator operand invalid' from regexp in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[26-Jul-2016 19:35:26 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[26-Jul-2016 19:35:26 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[26-Jul-2016 19:35:26 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[29-Jul-2016 17:01:59 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0   group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[29-Jul-2016 17:02:03 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0   group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[26-Aug-2016 20:00:30 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[26-Aug-2016 20:04:51 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[28-Aug-2016 21:22:00 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0   group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[30-Aug-2016 14:44:03 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[01-Sep-2016 12:49:22 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[30-Sep-2016 23:29:35 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[30-Sep-2016 23:29:35 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[30-Sep-2016 23:29:35 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[09-Oct-2016 02:23:11 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[09-Oct-2016 04:14:02 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[09-Oct-2016 04:15:09 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[26-Oct-2016 23:54:27 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1 and a.id_ciudad=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[07-Nov-2016 23:16:57 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[17-Nov-2016 05:05:54 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[17-Nov-2016 05:05:54 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[17-Nov-2016 05:05:54 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[17-Nov-2016 05:10:11 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[17-Nov-2016 05:10:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[17-Nov-2016 05:10:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[17-Nov-2016 05:25:41 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[17-Nov-2016 05:25:41 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[17-Nov-2016 05:25:41 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[17-Nov-2016 05:31:47 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[17-Nov-2016 05:31:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[17-Nov-2016 05:31:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[17-Nov-2016 06:10:49 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[17-Nov-2016 06:10:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[17-Nov-2016 06:10:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[17-Nov-2016 11:44:44 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[17-Nov-2016 11:44:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[17-Nov-2016 11:44:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[17-Nov-2016 11:45:57 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[17-Nov-2016 11:45:57 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[17-Nov-2016 11:45:57 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[17-Nov-2016 11:52:20 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[17-Nov-2016 11:52:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[17-Nov-2016 11:52:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[24-Nov-2016 07:34:09 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[24-Nov-2016 07:34:09 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[24-Nov-2016 07:34:09 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[24-Nov-2016 07:34:58 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[24-Nov-2016 07:34:58 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[24-Nov-2016 07:34:58 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[26-Nov-2016 03:10:58 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1 and a.id_ciudad=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[05-Dec-2016 17:26:27 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1 and a.id_ciudad=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[13-Dec-2016 21:45:34 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[13-Dec-2016 21:45:34 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[13-Dec-2016 21:45:34 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[17-Dec-2016 12:55:51 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[20-Dec-2016 00:44:32 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1 and a.id_ciudad=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[21-Dec-2016 01:38:11 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[25-Dec-2016 02:38:54 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0   group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[27-Dec-2016 01:04:56 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[31-Dec-2016 12:51:00 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[31-Dec-2016 12:51:00 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[31-Dec-2016 12:51:00 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[31-Dec-2016 12:53:53 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[31-Dec-2016 12:53:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[31-Dec-2016 12:53:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[31-Dec-2016 12:54:46 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[31-Dec-2016 12:54:46 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[31-Dec-2016 12:54:46 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[31-Dec-2016 13:01:52 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[31-Dec-2016 13:01:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[31-Dec-2016 13:01:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[04-Jan-2017 18:30:22 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1 and a.id_ciudad=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[09-Jan-2017 07:27:34 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[09-Jan-2017 07:27:34 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[09-Jan-2017 07:27:34 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[09-Jan-2017 09:56:28 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[09-Jan-2017 09:56:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[09-Jan-2017 09:56:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[09-Jan-2017 09:59:15 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[09-Jan-2017 09:59:15 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[09-Jan-2017 09:59:15 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[09-Jan-2017 10:00:17 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[09-Jan-2017 10:00:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[09-Jan-2017 10:00:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[09-Jan-2017 10:06:46 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[09-Jan-2017 10:06:46 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[09-Jan-2017 10:06:46 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[16-Jan-2017 15:38:51 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[16-Jan-2017 15:38:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[16-Jan-2017 15:38:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[22-Jan-2017 09:35:49 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[22-Jan-2017 09:35:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[22-Jan-2017 09:35:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[26-Jan-2017 14:13:17 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[26-Jan-2017 14:13:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[26-Jan-2017 14:13:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[26-Jan-2017 14:25:08 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[26-Jan-2017 14:25:08 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[26-Jan-2017 14:25:08 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[26-Jan-2017 14:47:22 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[26-Jan-2017 14:47:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[26-Jan-2017 14:47:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[31-Jan-2017 02:37:50 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[31-Jan-2017 02:37:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[31-Jan-2017 02:37:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[03-Feb-2017 04:34:27 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0   group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[03-Feb-2017 22:24:53 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0   group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[05-Feb-2017 16:32:22 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1 and a.id_ciudad=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[05-Feb-2017 16:35:28 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1 and a.id_ciudad=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[06-Feb-2017 19:59:55 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[06-Feb-2017 19:59:55 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[06-Feb-2017 19:59:55 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[06-Feb-2017 20:03:31 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[06-Feb-2017 20:03:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[06-Feb-2017 20:03:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[06-Feb-2017 20:04:44 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[06-Feb-2017 20:04:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[06-Feb-2017 20:04:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[06-Feb-2017 20:12:53 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[06-Feb-2017 20:12:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[06-Feb-2017 20:12:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[06-Feb-2017 21:02:50 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[06-Feb-2017 21:02:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[06-Feb-2017 21:02:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[07-Feb-2017 10:09:14 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[07-Feb-2017 10:09:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[07-Feb-2017 10:09:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[07-Feb-2017 22:15:17 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0   group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[07-Feb-2017 22:33:34 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[14-Feb-2017 14:49:18 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[14-Feb-2017 14:49:18 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[14-Feb-2017 14:49:18 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[14-Feb-2017 15:51:12 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[14-Feb-2017 15:51:12 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[14-Feb-2017 15:51:12 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[14-Feb-2017 20:02:58 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[14-Feb-2017 20:02:58 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[14-Feb-2017 20:02:58 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[15-Feb-2017 00:15:00 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[15-Feb-2017 00:15:00 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[15-Feb-2017 00:15:00 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[15-Feb-2017 00:24:44 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[15-Feb-2017 00:24:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[15-Feb-2017 00:24:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[15-Feb-2017 00:28:05 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[15-Feb-2017 00:28:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[15-Feb-2017 00:28:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[15-Feb-2017 00:52:25 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[15-Feb-2017 00:52:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[15-Feb-2017 00:52:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[15-Feb-2017 02:33:26 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[15-Feb-2017 02:33:26 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[15-Feb-2017 02:33:26 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[15-Feb-2017 03:47:40 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[15-Feb-2017 03:47:40 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[15-Feb-2017 03:47:40 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[15-Feb-2017 08:48:10 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[15-Feb-2017 08:48:10 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[15-Feb-2017 08:48:10 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[16-Feb-2017 21:44:58 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[16-Feb-2017 21:44:58 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[16-Feb-2017 21:44:58 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[17-Feb-2017 02:37:52 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[17-Feb-2017 02:37:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[17-Feb-2017 02:37:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[17-Feb-2017 13:34:42 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[17-Feb-2017 13:34:42 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[17-Feb-2017 13:34:42 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[17-Feb-2017 14:50:31 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[17-Feb-2017 14:50:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[17-Feb-2017 14:50:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[18-Feb-2017 15:07:02 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[18-Feb-2017 15:07:02 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[18-Feb-2017 15:07:02 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[23-Feb-2017 14:39:57 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[23-Feb-2017 14:39:57 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[23-Feb-2017 14:39:57 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[23-Feb-2017 16:31:43 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[23-Feb-2017 16:31:43 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[23-Feb-2017 16:31:43 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[24-Feb-2017 05:03:08 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[24-Feb-2017 05:03:08 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[24-Feb-2017 05:03:08 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[24-Feb-2017 17:39:07 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[24-Feb-2017 17:39:07 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[24-Feb-2017 17:39:07 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[26-Feb-2017 03:28:37 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0   group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[26-Feb-2017 05:00:37 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[26-Feb-2017 05:00:37 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[26-Feb-2017 05:00:37 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[27-Feb-2017 21:16:25 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[27-Feb-2017 21:16:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[27-Feb-2017 21:16:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[28-Feb-2017 05:32:13 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[28-Feb-2017 05:32:13 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[28-Feb-2017 05:32:13 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[28-Feb-2017 05:32:24 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[28-Feb-2017 05:32:24 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[28-Feb-2017 05:32:24 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[28-Feb-2017 05:32:58 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[28-Feb-2017 05:32:58 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[28-Feb-2017 05:32:58 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[28-Feb-2017 05:33:29 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[28-Feb-2017 05:33:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[28-Feb-2017 05:33:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[28-Feb-2017 05:39:37 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[28-Feb-2017 05:39:37 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[28-Feb-2017 05:39:37 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[01-Mar-2017 14:51:51 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[01-Mar-2017 14:51:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[01-Mar-2017 14:51:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[01-Mar-2017 14:56:30 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[01-Mar-2017 14:56:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[01-Mar-2017 14:56:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[01-Mar-2017 14:57:39 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[01-Mar-2017 14:57:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[01-Mar-2017 14:57:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[01-Mar-2017 15:08:38 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[01-Mar-2017 15:08:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[01-Mar-2017 15:08:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[04-Mar-2017 12:14:27 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1 and a.id_ciudad=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[06-Mar-2017 16:30:54 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[06-Mar-2017 16:30:54 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[06-Mar-2017 16:30:54 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[06-Mar-2017 16:32:46 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[06-Mar-2017 16:32:46 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[06-Mar-2017 16:32:46 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[06-Mar-2017 16:33:30 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[06-Mar-2017 16:33:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[06-Mar-2017 16:33:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[22-Mar-2017 17:07:54 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0   group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[22-Mar-2017 17:08:40 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0   group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[23-Mar-2017 19:57:03 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0   group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[28-Mar-2017 19:38:10 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1 and a.id_ciudad=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[29-Mar-2017 23:48:46 UTC] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ofertohaggenit/public_html/app/classes/phpmailer.php on line 1219
+[29-Mar-2017 23:48:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/classes/phpmailer.php:1219) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[29-Mar-2017 23:48:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/classes/phpmailer.php:1219) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[08-Apr-2017 10:20:18 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[08-Apr-2017 10:20:18 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[08-Apr-2017 10:20:18 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[08-Apr-2017 10:20:53 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[08-Apr-2017 10:20:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[08-Apr-2017 10:20:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[08-Apr-2017 10:29:34 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[08-Apr-2017 10:29:34 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[08-Apr-2017 10:29:34 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[08-Apr-2017 10:38:50 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[08-Apr-2017 10:38:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[08-Apr-2017 10:38:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[08-Apr-2017 10:46:28 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[08-Apr-2017 10:46:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[08-Apr-2017 10:46:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[08-Apr-2017 11:06:18 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[08-Apr-2017 11:06:18 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[08-Apr-2017 11:06:18 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[08-Apr-2017 11:12:14 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[08-Apr-2017 11:12:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[08-Apr-2017 11:12:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[12-Apr-2017 03:07:48 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[12-Apr-2017 05:50:10 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1 and a.id_ciudad=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[18-Apr-2017 02:16:51 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0  and a.id_pais=1 and a.id_dpto=1 and a.id_ciudad=1  group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[11-May-2017 12:30:27 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[11-May-2017 12:30:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[11-May-2017 12:30:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[11-May-2017 12:30:27 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[11-May-2017 12:30:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[11-May-2017 12:30:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[11-May-2017 19:53:50 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[11-May-2017 19:53:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[11-May-2017 19:53:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[11-May-2017 19:53:50 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[11-May-2017 19:53:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[11-May-2017 19:53:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[11-May-2017 23:21:48 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[11-May-2017 23:21:48 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[11-May-2017 23:21:48 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[11-May-2017 23:21:48 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[11-May-2017 23:21:48 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[11-May-2017 23:21:48 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[13-May-2017 07:17:26 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[13-May-2017 07:17:26 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[13-May-2017 07:17:26 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[13-May-2017 07:17:26 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[13-May-2017 07:17:26 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[13-May-2017 07:17:26 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[13-May-2017 10:04:39 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[13-May-2017 10:04:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[13-May-2017 10:04:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[13-May-2017 10:04:39 UTC] PHP Notice:  Undefined index: HTTP_ACCEPT in /home/ofertohaggenit/public_html/app/index.php on line 78
+[13-May-2017 10:04:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 35
+[13-May-2017 10:04:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ofertohaggenit/public_html/app/index.php:78) in /home/ofertohaggenit/public_html/app/classes/ResponseJson.php on line 36
+[15-May-2017 21:50:04 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0   group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
+[18-May-2017 16:04:17 UTC] PHP Fatal error:  No se pudo ejecutar la consulta select p.oferta_precio from productos p 
+      left join galeria_imagenes g on p.id_galeria=g.id_galeria 
+      left join core_empresas e on p.id_empresa=e.id_empresa 
+      left join almacen_productos ap on ap.id_producto=p.id_producto 
+      left join almacenes a on ap.id_almacen = a.id_almacen  
+      where oferta_portal='Activo' and p.oferta_publicacion &lt;= CURDATE() and oferta_vencimiento &gt; CURDATE() and borrado='0' and oferta_aprobada='Si' and  p.compras&lt;&gt;0   group by p.id_productoorder by p.oferta_precio desc limit 1  : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by p.oferta_precio desc limit 1' at line 6 in /home/ofertohaggenit/public_html/app/classes/db.php on line 73
