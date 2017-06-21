@@ -417,8 +417,8 @@ class Pedido extends ControlBase {
 										<input id="ref_id" type="hidden" name="ref_id" value="'.$refventa.'">
 										<input id="description" type="hidden" name="description" value="Producto 1">
 										<input id="total" type="hidden" name="total" value="'.$valor.'">
-										<input id="success_url" type="hidden" name="success_url" value="http://'.DOMINIO.URLBASE.'pedido-respuesta-orden-'.$refventa.'">
-										<input id="error_url" type="hidden" name="error_url" value="http://oferto.co/pedido-respuesta">
+										<input id="success_url" type="hidden" name="success_url" value="http://'.DOMINIO.URLBASE.'pedido-respuesta-estado-success">
+										<input id="error_url" type="hidden" name="error_url" value="http://'.DOMINIO.URLBASE.'pedido-respuesta-estado-failed">
 										<input type="image" src="'.URLVISTA.'images/boton_ii-money.png" border="0" name="submit" alt="Comprar con ii-money">
 									</form>';
 						}
@@ -585,8 +585,8 @@ class Pedido extends ControlBase {
 										<input id="ref_id" type="hidden" name="ref_id" value="'.$refventa.'">
 										<input id="description" type="hidden" name="description" value="Producto 1">
 										<input id="total" type="hidden" name="total" value="'.$valor.'">
-										<input id="success_url" type="hidden" name="success_url" value="http://'.DOMINIO.URLBASE.'pedido-respuesta-orden-'.$refventa.'">
-										<input id="error_url" type="hidden" name="error_url" value="http://oferto.co/pedido-respuesta">
+										<input id="success_url" type="hidden" name="success_url" value="http://'.DOMINIO.URLBASE.'pedido-respuesta-estado-success">
+										<input id="error_url" type="hidden" name="error_url" value="http://'.DOMINIO.URLBASE.'pedido-respuesta-estado-failed">
 										<input type="image" src="'.URLVISTA.'images/boton_ii-money.png" border="0" name="submit" alt="Comprar con ii-money">
 									</form>';
 							}
@@ -747,54 +747,7 @@ class Pedido extends ControlBase {
 
 	}
 
-	public function respuestaExitosa()
-	{
-		$ref_id = nvl($_GET['ref_id']);
-		$description = nvl($_GET['description']);
-		$total = nvl($_GET['total']);
-
-		$pedido = $ped->obtener($ref_id);
-		if($pedido['id_pedido']){
-			$reg['id_pedido']= $pedido['id_pedido'];
-			$reg['titulo']= 'TRANSACCIÓN EXITOSA';
-			$reg['mensaje'] = "Transacci&oacute;n aprobada";
-		}
-		else{
-			$reg['titulo']= 'TRANSACCIÓN EXITOSA';
-			$reg['mensaje'] = "La transacción fue aprobada pero no se encontró el pedido correspondiente en nuestro sistema. Por favor comuníquese con nosotros.";
-		}
-
-		$reg['informe']='<table align="center" width="400" cellpadding="5" cellspacing="3" border="0" class="t_pedido">
-		<tr><td><strong>Fecha de procesamiento</strong></td><td>'.$pedido['fecha'].'</td></tr>
-		<tr><td><strong>Estado de la transacci&oacute;n</strong></td><td>'.$reg['mensaje'] .'</td></tr>
-		<tr><td><strong>Pedido #</strong></td><td>'.$ref_id.'</td></tr>
-		<tr><td><strong>Descripci&oacute;n</strong></td><td>'.$description.'</td></tr>
-		<tr>';
-		$reg['informe'].='<tr><td><strong>Valor total</strong></td><td>'.vn($total).' COP</td></tr>
-		</table>';
-
-		if(defined('SKIN') and isset($_SESSION['id_empresa'])){
-			$this->view->show('skin/'.SKIN.'/modulo_pago.php', $reg);
-		}
-		else{
-			$this->view->show('modulo_pago.php', $reg);
-		}
-	}
-
-	public function respuestaFallida()
-	{
-		$ref_id = nvl($_GET['ref_id']);
-		$reg['titulo'] = 'TRANSACCIÓN FALLIDA';
-		$reg['mensaje'] = 'Lo sentimos, la transacci&oacute;n '.$ref_id.' ha fallado';
-
-		if(defined('SKIN') and isset($_SESSION['id_empresa'])){
-			$this->view->show('skin/'.SKIN.'/modulo_pago.php', $reg);
-		}
-		else{
-			$this->view->show('modulo_pago.php', $reg);
-		}
-	}
-
+	
 	public function confirmacion(){
 
 		$reg= '';
