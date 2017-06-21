@@ -13,7 +13,7 @@ class Pedido extends ControlBase {
 	public function detalles(){$pedido = new Pedidos();
 		$reg['productos'] = pedido::mispedidos($this->get['id_pedido']);
 		$reg['cliente'] = $pedido->obtenerCliente($this->get['id_pedido']);
-		$reg['ped']= $pedido->obtener($this->get['id_pedido']);  
+		$reg['ped']= $pedido->obtener($this->get['id_pedido']);
 		$this->view->show('admin/detalles_pedido.php',$reg);}
 
 	/**
@@ -35,7 +35,7 @@ class Pedido extends ControlBase {
 	   $ped    = new pedidos();
 	   $idemp=($_SESSION['id_tipo_usuario']==2) ? 0: $_SESSION['id_empresa'];
 	   $pedido = $ped->listar($idemp);
-	   
+
 	   if(isset($this->get['cliente'])){
 		   $usu= new Usuarios();
 		   $usuario= $usu->obtener($this->get['cliente']);
@@ -75,7 +75,7 @@ class Pedido extends ControlBase {
 
 	   $reg['tabla'] .='<tbody>';
 	   foreach($pedido as $content){
-		   
+
 		 $pendienteState = "";
            $confirmadoState = "";
            $canceladoState = "";
@@ -90,7 +90,7 @@ class Pedido extends ControlBase {
            	case 'Cancelado':
            		$canceladoState = 'selected="selected"';
            		break;
-           }  
+           }
 
 		$nombre= ($content['nombre']!='') ? $content['nombre']:$content['nombre_pedido'];
 		$plataforma= ($content['usuempresa']==0) ? 'Oferto.co':'Sitio Web';
@@ -109,7 +109,7 @@ class Pedido extends ControlBase {
 
 	     $reg['tabla'] .='
             <tr id="'.$content['id_pedido'].'" '.$clase.'>
-			
+
               <td >'.$content['id_pedido'].'</td>
 			   <td>'.$content['orden'].'</td>
               <td>'.$nombre.'</td>
@@ -122,7 +122,7 @@ class Pedido extends ControlBase {
 			if($dempresa['codigo_activo']==1)
 				$reg['tabla'] .='<td>'.$content['codigo_descuento'].'</td>';
 
-			$reg['tabla'] .=' 
+			$reg['tabla'] .='
               <td><a class="formulario btn btn-mini" href="pedido-detalles-id_pedido-'.$content['id_pedido'].'">Detalles</a> <a class="delete btn btn-mini btn-danger" href="javascript:borrar('.$content['id_pedido'].')" >Eliminar</a></td>
             </tr>';
 	   }
@@ -199,7 +199,7 @@ class Pedido extends ControlBase {
 		 $this->view->show("admin/edit_pedidos.php", $reg);
 
 	  }
-	  
+
 	  public function estado(){
 
      	$ped = new pedidos();
@@ -216,7 +216,7 @@ class Pedido extends ControlBase {
 				$guardarestado=1;
 				//$this->estadoProductoPedido($id,1);
 			}
-				
+
 			elseif($estado=='Cancelado'){
 				$ped->datos['compra']=0;
 				$guardarestado=0;
@@ -248,8 +248,8 @@ class Pedido extends ControlBase {
 		else
 			echo "0";
 	 }
-	 
-	 
+
+
 	 /**
 	 * borrar
 	 *
@@ -258,59 +258,60 @@ class Pedido extends ControlBase {
 	 public static function rating()
 	{
 		$ped= new pedidos();
-		$aResponse['error'] = false;	
-			
+		$aResponse['error'] = false;
+
 		if(isset($_POST['action']))
 		{
 			if(htmlentities($_POST['action'], ENT_QUOTES, 'UTF-8') == 'rating')
 			{
 				$id = intval($_POST['idBox']);
 				$ped->datos['calificacion']=  floatval($_POST['rate']);
-				
-				if($id_calificacion=$ped->guardar($id))	
-				{		
+
+				if($id_calificacion=$ped->guardar($id))
+				{
 					$success = true;
-					$aResponse['error'] = false;	
+					$aResponse['error'] = false;
 				}
 				else
 				{
 					$success = false;
-					$aResponse['error'] = true;	
+					$aResponse['error'] = true;
 				}
-				
+
 			}
 			else
 			$aResponse['error'] = true;
 		}
 		else
-		$aResponse['error'] = true;		
-		
+		$aResponse['error'] = true;
+
 		echo json_encode($aResponse);
 	}
 
 	public function pruebaonline()
 	{
 		$estado_pago= 1;
-		
+
 		redirect("pedido-respuesta?estado_pago=".$estado_pago."");
 	}
-	
+
 	public function enviar_pago(){
 		$ped= new Pedidos();
 		$productos= new Productos();
 		$conf= new empresas();
 		$cart = new carrito();
-		$metodo_pago = nvl($_POST['metodo_pago'],'otro');
+		$metodo_pago = nvl($_POST['metodo_pago'], 'otro');
 
-		
-		if(defined('SKIN') and isset($_SESSION['id_empresa'])){			
+		if(defined('SKIN') and isset($_SESSION['id_empresa'])){
+
+			$metodo_pago = nvl($_POST['metodo_pago'], 'otro');
 			if(nvl($_SESSION['d_pedido']['email_pedido'])!='' and (nvl($_SESSION['nf'],0))){
 				$valido=1;
 				//validar cantidades a comprar
 				$cproducto= new Producto();
 				$ids=array();
 				for($p =0; $p<$cart->nf; $p++){
-					
+
 					if(nvl($cart->carro['estado'][$p]) and (!in_array($cart->carro['producto'][$p], $ids))){
 						array_push($ids, $cart->carro['producto'][$p]);
 						if($cproducto->validar_cantidad_carrito($cart->carro['producto'][$p],0)!=1){
@@ -320,7 +321,7 @@ class Pedido extends ControlBase {
 
 					}
 				}
-			//fin validar 
+				//fin validar
 
 				if($valido>0){
 					$empresa= $conf->obtener($_SESSION['id_empresa']);
@@ -336,19 +337,17 @@ class Pedido extends ControlBase {
 					$descripcion='Compra de productos en '.DOMINIO.', Pedido No.'.$orden;
 					$emailComprador=  $_SESSION['d_pedido']['email_pedido'];
 					$ped->datos['id_empresa']=$_SESSION['id_empresa'];
-					
+
 					$id_pedido = $ped->guardar(0);
 					unset($_SESSION['d_pedido']);
 
-
-					
 					$total = 0;
-					$moneda= 'COP';
+					$moneda = 'COP';
 
 					$i_emp=0;
 					$es_promocion=0;
 					for($p =0; $p<$cart->nf; $p++){
-						if(nvl($cart->carro['estado'][$p])){ 
+						if(nvl($cart->carro['estado'][$p])){
 							$dat['id_producto'] = $cart->carro['producto'][$p];
 							$dat['nombre'] = $cart->carro['nombre'][$p].$cart->carro['referencia'][$p];
 							$dat['id_pedido'] = $id_pedido;
@@ -373,32 +372,32 @@ class Pedido extends ControlBase {
 									$productos->datos['oferta_existencia']= $unidades;
 									$productos->guardar($dat['id_producto']);
 								}
-									
+
 								if($producto['existencia_estado']=='1'){
 									$unidades=$producto['existencia']-$dat['cantidad'];
-									$productos->datos['existencia']= $unidades;	
+									$productos->datos['existencia']= $unidades;
 									$productos->guardar($dat['id_producto']);
 								}
-								
+
 							}
 						}
-					} 
+					}
 					$ped->datos= array();
 					$ped->datos['total']=$total;
 					if($es_promocion and $empresa['codigo_activo']=='1'){
 						$cod_desc=md5($orden.rand(0,99));
 						$cod_desc=substr($cod_desc, -8,strlen($cod_desc)-1);
 						$ped->datos['codigo_descuento']=$cod_desc;
-						$ped->guardar($id_pedido);	 
+						$ped->guardar($id_pedido);
 					}
 
-					
+
 					$reg['id_pedido']=$id_pedido;
 					$cart->destruirCarrito();
 
 					$refventa= $id_pedido;
 					$valor= $total;
-				
+
 					if($metodo_pago=='otro'){
 
 						$reg['form']='<h1>Su pedido se ha registrado con exito, por favor siga los pasos indicados para concretar la compra.</h1><p>&nbsp;</p><p>'.$empresa['otro_descripcion'].'</p>';
@@ -407,29 +406,24 @@ class Pedido extends ControlBase {
 					}
 					else{
 
-						if ($metodo_pago=='ii-money') 
+						if($metodo_pago == 'ii-money')
 						{
-
-					
-						//$id= $empresa['iimoney_convenio'];
-						$convenio = '603201790-2';
-						$respuesta_exitosa ='pagos.ii-money.com';
-						$reg['form']='<form method="get" action="http://pagos.ii-money.com/payment/login" target="_self">
+							$convenio = $empresa['iimoney_convenio'];
+                                $_SESSION['pro_description']=$producto['descripcion'];
+                                $_SESSION['pro_total']=$valor;
+								$reg['form'] = '<form name="form_pago" id="form_pago" method="get" action="http://pagos.ii-money.com/payment/login" target="_self">
 										<input id="local_id" type="hidden" name="local_id" value="'.$convenio.'">
 										<input id="transaction_type" type="hidden" name="transaction_type" value="payment">
 										<input id="ref_id" type="hidden" name="ref_id" value="'.$refventa.'">
 										<input id="description" type="hidden" name="description" value="Producto 1">
-										<input id="monto" type="hidden" name="monto" value="'.$valor.'">
-										<input id="url_respuesta_exitosa" type="hidden" name="url_respuesta_exitosa" value="oferto.co">
-										<input id="url_respuesta_negativa" type="hidden" name="url_respuesta_negativa" value="oferto.co">
+										<input id="total" type="hidden" name="total" value="'.$valor.'">
+										<input id="success_url" type="hidden" name="success_url" value="http://'.DOMINIO.URLBASE.'pedido-respuesta-orden-'.$refventa.'">
+										<input id="error_url" type="hidden" name="error_url" value="http://oferto.co/pedido-respuesta">
 										<input type="image" src="'.URLVISTA.'images/boton_ii-money.png" border="0" name="submit" alt="Comprar con ii-money">
-
-									
-									  </form>';
-
-						}else
+									</form>';
+						}
+						else
 						{
-	
 						$llave=  $empresa['payu_llave'];
 						$userid= $empresa['payu_userid'];
 						$accountid= $empresa['payu_accountid'];
@@ -449,23 +443,21 @@ class Pedido extends ControlBase {
 						<input name="merchantId"  type="hidden" value="'.$userid.'">
 						<input name="accountId"  type="hidden" value="'.$accountid.'">
 						<input name="descripcion"  type="hidden" value="'.$descripcion.'">
-						<input name="buyerEmail" type="hidden" value="'.$emailComprador.'">	
+						<input name="buyerEmail" type="hidden" value="'.$emailComprador.'">
 						<input name="amount" type="hidden" value="'.$valor.'">
 						<input name="taxReturnBase" type="hidden"value="'.$based.'">
 						<input name="tax" type="hidden" value="'.$iva.'">
 						<input name="currency" type="hidden" value="'.$moneda.'">
-						<input name="signature" type="hidden" value="'.$firma.'"> 
+						<input name="signature" type="hidden" value="'.$firma.'">
 						<input type="hidden" name="Test" value="'.$prueba.'">
 
 						<input type="hidden" name="responseUrl" value="http://'.DOMINIO.URLBASE.'pedido-respuesta-orden-'.$orden.'">
 						<input type="hidden" name="confirmationUrl" value="http://'.DOMINIO.URLBASE.'pedido-confirmacion">
 						<h2>Redireccionando al modulo de pagos.....</h2>
-						<p>Si en 30 segundos no ha entrado a pagosonline de click en 
+						<p>Si en 30 segundos no ha entrado a pagosonline de click en
 						<input type="submit" name="submit2" value="Ir a pagosonline" data-role="none"></p>
 						</form>';
 						}
-
-						
 					}
 					$this->view->show('skin/'.SKIN.'/modulo_pago.php', $reg);
 				}else{
@@ -482,7 +474,7 @@ class Pedido extends ControlBase {
 				$metodo_pago= $this->input->post('metodo_pago');
 				$cantidad= $this->input->post('cantidad');
 				$cantidad= intval($cantidad);
-				
+
 				if($prodcompra['id_producto'] and is_int($cantidad)){
 
 					$valido=1;
@@ -490,12 +482,11 @@ class Pedido extends ControlBase {
 					if($prodcompra['oferta_existencia_estado']=='1'){
 						if($prodcompra['oferta_existencia']<$cantidad)
 						$valido=0;
-					} 
+					}
 					elseif($prodcompra['existencia_estado']=='1' and $prodcompra['existencia']<$cantidad)
 						$valido=0;
+				//fin validar
 
-			//fin validar 
-			//
 					if($valido){
 						$ped->datos= $_SESSION['d_pedido'];
 
@@ -548,7 +539,7 @@ class Pedido extends ControlBase {
 								$unidades=$producto['oferta_existencia']-$cantidad;
 								$productos->datos['oferta_existencia']= $unidades;
 							}
-								
+
 							if($producto['existencia_estado']=='1'){
 								$unidades=$producto['existencia']-$cantidad;
 								$productos->datos['existencia']= $unidades;
@@ -565,7 +556,7 @@ class Pedido extends ControlBase {
 							$ped->datos['codigo_descuento']=$cod_desc;
 						}
 
-						$ped->guardar($id_pedido);	 
+						$ped->guardar($id_pedido);
 						$reg['id_pedido']=$id_pedido;
 						unset($_SESSION['compra']);
 
@@ -573,7 +564,7 @@ class Pedido extends ControlBase {
 						$refventa= $id_pedido;
 						$valor= $total;
 						$empresa= $conf->obtener($idemp);
-						$dominio= $conf->getDominio($idemp);	
+						$dominio= $conf->getDominio($idemp);
 
 						if($metodo_pago=='otro'){
 							$reg['form']='<h4>Su pedido se ha registrado con exito, por favor siga los pasos indicados para concretar la compra.</h4><p>&nbsp;</p>';
@@ -582,27 +573,25 @@ class Pedido extends ControlBase {
 							correo::enviar_compra($id_pedido);
 						}
 						else{
-							if ($metodo_pago=='ii-money') 
+							if($metodo_pago == 'ii-money')
 							{
-												
-								$convenio = '603201790-2';
-								$respuesta_exitosa ='pagos.ii-money.com';
-								$reg['form']='<form method="get" action="http://pagos.ii-money.com/payment/login" target="_self">
+								
+								$convenio = $empresa['iimoney_convenio'];
+                                $_SESSION['pro_description']=$producto['descripcion'];
+                                $_SESSION['pro_total']=$valor;
+								$reg['form'] = '<form name="form_pago" id="form_pago" method="get" action="http://pagos.ii-money.com/payment/login" target="_self">
 										<input id="local_id" type="hidden" name="local_id" value="'.$convenio.'">
 										<input id="transaction_type" type="hidden" name="transaction_type" value="payment">
 										<input id="ref_id" type="hidden" name="ref_id" value="'.$refventa.'">
 										<input id="description" type="hidden" name="description" value="Producto 1">
 										<input id="total" type="hidden" name="total" value="'.$valor.'">
-										<input id="success_url" type="hidden" name="success_url" value="http://oferto.co/pedido-respuestaExitosa">
-										<input id="error_url" type="hidden" name="error_url" value="http://oferto.co/pedido-respuestaFallida">
+										<input id="success_url" type="hidden" name="success_url" value="http://'.DOMINIO.URLBASE.'pedido-respuesta-orden-'.$refventa.'">
+										<input id="error_url" type="hidden" name="error_url" value="http://oferto.co/pedido-respuesta">
 										<input type="image" src="'.URLVISTA.'images/boton_ii-money.png" border="0" name="submit" alt="Comprar con ii-money">
-
-									
-									  </form>';
-
-							}else
+									</form>';
+							}
+							else
 							{
-
 								$llave=  $empresa['payu_llave'];
 								$userid= $empresa['payu_userid'];
 								$accountid= $empresa['payu_accountid'];
@@ -622,22 +611,21 @@ class Pedido extends ControlBase {
 								<input name="merchantId"  type="hidden" value="'.$userid.'">
 								<input name="accountId"  type="hidden" value="'.$accountid.'">
 								<input name="descripcion"  type="hidden" value="'.$descripcion.'">
-								<input name="buyerEmail" type="hidden" value="'.$emailComprador.'">	
+								<input name="buyerEmail" type="hidden" value="'.$emailComprador.'">
 								<input name="amount" type="hidden" value="'.$valor.'">
 								<input name="taxReturnBase" type="hidden"value="'.$based.'">
 								<input name="tax" type="hidden" value="'.$iva.'">
 								<input name="currency" type="hidden" value="'.$moneda.'">
-								<input name="signature" type="hidden" value="'.$firma.'"> 
+								<input name="signature" type="hidden" value="'.$firma.'">
 								<input type="hidden" name="Test" value="'.$prueba.'">
 
 								<input type="hidden" name="responseUrl" value="http://'.DOMINIO.URLBASE.'pedido-respuesta-orden-'.$orden.'">
 								<input type="hidden" name="confirmationUrl" value="http://'.DOMINIO.URLBASE.'pedido-confirmacion">
 								<h2>Redireccionando al modulo de pagos.....</h2>
-								<p>Si en 30 segundos no ha entrado a pagosonline de click en 
+								<p>Si en 30 segundos no ha entrado a pagosonline de click en
 								<input type="submit" name="submit2" value="Ir a pagosonline" data-role="none"></p>
 								</form>';
 							}
-
 						}
 						$this->view->show('modulo_pago.php', $reg);
 					}
@@ -650,27 +638,27 @@ class Pedido extends ControlBase {
 				redirect('main-productos');
 		}
 	}
-	
-	public function respuesta(){	
+
+	public function respuesta(){
 		$ped= new Pedidos();
 		$reg['titulo']= 'TRANSACCIÓN FALLIDA';
-		$reg['informe']= 'Transacci&oacute;n fallida';
-		
+		$reg['informe']= 'Transacci&oacute;n fallida prueba';
+
 		if(isset($_GET['transactionState'])){
 			$id_pedido=nvl($_GET['referenceCode']);
 			$state_pol=nvl($_GET['transactionState']);
-			
+
 			$processingDate=nvl($_GET['processingDate']);
 			$reference_pol=nvl($_GET['reference_pol']);
 			$orden=nvl($this->get['orden']);
-			
+
 			$resconcecod_pol= nvl($_GET['polResponseCode']);
-			
+
 			$cus=nvl($_GET['cus']);
 			$banco_pse=nvl($_GET['pseBank']);
 			$value=nvl($_GET['TX_VALUE'],0);
-			
-		
+
+
 			if($state_pol== 6 && $resconcecod_pol == 5){
 				$reg['mensaje']= 'Transacci&oacute;n fallida';
 			}
@@ -681,7 +669,7 @@ class Pedido extends ControlBase {
 				$reg['mensaje'] ="Pendiente, Por favor revisar si el d&eacute;bito fue realizado en el Banco";
 			}
 			else if($state_pol == 4 && $resconcecod_pol == 1){
-				$pedido= $ped->obtener($id_pedido);	
+				$pedido= $ped->obtener($id_pedido);
 				if($pedido['id_pedido']){
 					$reg['id_pedido']= $pedido['id_pedido'];
 					$reg['titulo']= 'TRANSACCIÓN EXITOSA';
@@ -695,7 +683,7 @@ class Pedido extends ControlBase {
 			else{
 				$reg['mensaje'] =nvl($_GET['mensaje']);
 			}
-			
+
 			$reg['informe']='<table align="center" width="400" cellpadding="5" cellspacing="3" border="0" class="t_pedido">
 			<tr><td><strong>Fecha de procesamiento</strong></td><td>'.$processingDate.'</td></tr>
 			<tr><td><strong>Estado de la transacci&oacute;n</strong></td><td>'.$reg['mensaje'] .'</td></tr>
@@ -709,22 +697,63 @@ class Pedido extends ControlBase {
 			$reg['informe'].='<tr><td><strong>Valor total</strong></td><td>'.vn($value).' COP</td></tr>
 			</table>';
 		}
-        
+        else{
+					$codtrans=nvl($this->get['estado']);
+        			if($codtrans=="success")
+        			{
+        			        				
+		    			$ref_id = nvl($_GET['ref_id']);
+				        $description = $_SESSION['pro_description'];
+				        $total = $_SESSION['pro_total'];
+				                
+				        $pedido= $ped->obtener($ref_id);	
+				        $NuevoPed= $ped->actualizarEstado($ref_id, "Pago confirmado");
+						if($pedido['id_pedido'])
+						{
+							$reg['id_pedido']= $pedido['id_pedido'];
+							$reg['titulo']= 'TRANSACCIÓN EXITOSA';
+							//$reg['mensaje'] = "Transacci&oacute;n aprobada";
+						}
+						else
+						{
+							$reg['titulo']= 'TRANSACCIÓN EXITOSA';
+							$reg['mensaje'] = "La transacción fue aprobada pero no se encontró el pedido correspondiente en nuestro sistema. Por favor comuníquese con nosotros.";
+						}
+				                            
+				        $reg['informe']='<table align="center" width="400" cellpadding="5" cellspacing="3" border="0" class="t_pedido">
+						<tr><td><strong>Fecha de procesamiento</strong></td><td>'.$pedido['fecha'].'</td></tr>
+						<tr><td><strong>Estado de la transacci&oacute;n</strong></td><td>'.$reg['titulo'] .'</td></tr>
+						<tr><td><strong>Pedido #</strong></td><td>'.$ref_id.'</td></tr>
+						<tr><td><strong>Descripci&oacute;n</strong></td><td>'.$description.'</td></tr>
+						<tr>';
+						$reg['informe'].='<tr><td><strong>Valor total</strong></td><td>'.vn($total).' COP</td></tr>
+						</table>';
+				        
+				        if(defined('SKIN') and isset($_SESSION['id_empresa']))
+						$this->view->show('skin/'.SKIN.'/modulo_pago.php', $reg);
+						else
+						{
+							$this->view->show('modulo_pago.php', $reg);
+						}
+        			}     
+
+		}
+
 		if(defined('SKIN') and isset($_SESSION['id_empresa']))
 		$this->view->show('skin/'.SKIN.'/modulo_pago.php', $reg);
 		else{
 			$this->view->show('modulo_pago.php', $reg);
 		}
-		
+
 	}
-    
-    public function respuestaExitosa() {
-            
-        $ref_id = nvl($_GET['ref_id']);
-        $description = nvl($_GET['description']);
-        $total = nvl($_GET['total']);
-                
-        $pedido= $ped->obtener($ref_id);	
+
+	public function respuestaExitosa()
+	{
+		$ref_id = nvl($_GET['ref_id']);
+		$description = nvl($_GET['description']);
+		$total = nvl($_GET['total']);
+
+		$pedido = $ped->obtener($ref_id);
 		if($pedido['id_pedido']){
 			$reg['id_pedido']= $pedido['id_pedido'];
 			$reg['titulo']= 'TRANSACCIÓN EXITOSA';
@@ -734,8 +763,8 @@ class Pedido extends ControlBase {
 			$reg['titulo']= 'TRANSACCIÓN EXITOSA';
 			$reg['mensaje'] = "La transacción fue aprobada pero no se encontró el pedido correspondiente en nuestro sistema. Por favor comuníquese con nosotros.";
 		}
-                            
-        $reg['informe']='<table align="center" width="400" cellpadding="5" cellspacing="3" border="0" class="t_pedido">
+
+		$reg['informe']='<table align="center" width="400" cellpadding="5" cellspacing="3" border="0" class="t_pedido">
 		<tr><td><strong>Fecha de procesamiento</strong></td><td>'.$pedido['fecha'].'</td></tr>
 		<tr><td><strong>Estado de la transacci&oacute;n</strong></td><td>'.$reg['mensaje'] .'</td></tr>
 		<tr><td><strong>Pedido #</strong></td><td>'.$ref_id.'</td></tr>
@@ -743,61 +772,63 @@ class Pedido extends ControlBase {
 		<tr>';
 		$reg['informe'].='<tr><td><strong>Valor total</strong></td><td>'.vn($total).' COP</td></tr>
 		</table>';
-        
-        if(defined('SKIN') and isset($_SESSION['id_empresa']))
-		$this->view->show('skin/'.SKIN.'/modulo_pago.php', $reg);
+
+		if(defined('SKIN') and isset($_SESSION['id_empresa'])){
+			$this->view->show('skin/'.SKIN.'/modulo_pago.php', $reg);
+		}
 		else{
 			$this->view->show('modulo_pago.php', $reg);
 		}
-        
-    }
-    
-    public function respuestaFallida() {
-        $ref_id = nvl($_GET['ref_id']);
-        $reg['titulo']= 'TRANSACCIÓN FALLIDA';
-		$reg['mensaje']= 'Lo sentimos, la transacci&oacute;n '.$ref_id.' ha fallado';
-        
-        if(defined('SKIN') and isset($_SESSION['id_empresa']))
-		$this->view->show('skin/'.SKIN.'/modulo_pago.php', $reg);
+	}
+
+	public function respuestaFallida()
+	{
+		$ref_id = nvl($_GET['ref_id']);
+		$reg['titulo'] = 'TRANSACCIÓN FALLIDA';
+		$reg['mensaje'] = 'Lo sentimos, la transacci&oacute;n '.$ref_id.' ha fallado';
+
+		if(defined('SKIN') and isset($_SESSION['id_empresa'])){
+			$this->view->show('skin/'.SKIN.'/modulo_pago.php', $reg);
+		}
 		else{
 			$this->view->show('modulo_pago.php', $reg);
 		}
-    }
-	
+	}
+
 	public function confirmacion(){
-				
+
 		$reg= '';
 		$ped= new Pedidos();
 		$prod=new Productos();
-		
+
 		if($this->input->post('state_pol')){
 			$state_pol=$this->input->post('state_pol');
 			$referencia_pol=$this->input->post('response_code_pol');
 			$id_pedido=$this->input->post('reference_sale');
 			$extra1=$this->input->post('extra1');
-			
-			$pedido= $ped->obtener($id_pedido);	
-			
-			if(nvl($pedido['id_pedido'],0)){			
+
+			$pedido= $ped->obtener($id_pedido);
+
+			if(nvl($pedido['id_pedido'],0)){
 					$ped->datos='';
-					
+
 					$ped->datos['estado']= ($state_pol==4) ? 'Pago confirmado':'Pago pendiente';
 					$ped->datos['compra']= ($state_pol==4) ? '1':'0';
 					$ped->guardar($pedido['id_pedido']);
-			
-				if ($state_pol==4){	
+
+				if ($state_pol==4){
 					$this->estadoProductoPedido($pedido['id_pedido'],1);
-					
+
 					$idusu= $pedido['id_usuario'];
 					$idemp= $pedido['id_empresa'];
 
 					correo::enviar_correo_cotizacion($pedido['id_pedido']);
 					correo::enviar_compra($pedido['id_pedido']);
-						
+
 				}
 				else
 					$this->estadoProductoPedido($pedido['id_pedido'],0);
-			}				
+			}
 		}
 	}
 
@@ -808,7 +839,7 @@ class Pedido extends ControlBase {
 		$cadena='';
 
 		$proped=$ped->listarProductosPedido($id_pedido);
-		
+
 		foreach($proped as $prope){
 			$producto= $prod->obtener($prope['id_producto']);
 			$esofertaprod=($producto['oferta']=='Activo' and ($producto['oferta_publicacion']<=date("Y-m-d")) and ($producto['oferta_vencimiento']>date("Y-m-d")) )? 1:0;
@@ -835,9 +866,9 @@ class Pedido extends ControlBase {
 		$empresa=$empresas->obtener($pedido['id_empresa']);
 		if($empresa['puntos_activo']==1 and $estado==1){
 			$usuarios= new Usuarios();
-			
+
 			$usuario= $usuarios->obtener($pedido['id_usuario']);
-			
+
 			if($pedido['id_usuario'] and nvl($usuario['id_empresa'])==$pedido['id_empresa']){
 				$unidades=$empresa['puntos_unidad'];
 				$puntos= new Puntos();
@@ -850,11 +881,11 @@ class Pedido extends ControlBase {
 		if($estado){
 			correo::enviar_calificar_productos($pedido['id_usuario'],$cadena);
 		}
-		
+
 
 	}
 
-	
+
 	public function exportar_ventas(){
 		$ped    = new pedidos();
 		$idemp=($_SESSION['id_tipo_usuario']==2) ? 0: $_SESSION['id_empresa'];
@@ -886,7 +917,7 @@ class Pedido extends ControlBase {
 			foreach($proped as $nom){
 				$productos.=$nom['nombre'].' - ';
 			}
-			
+
 			if($productos!='')
 			$productos= substr($productos, 0, strlen($productos)-3);
 
@@ -941,6 +972,6 @@ class Pedido extends ControlBase {
 		$reg['cantidad']=$npedidos;
 		$reg['lista']=$cadena;
 		return $reg;
-	}	
+	}
 }
 ?>

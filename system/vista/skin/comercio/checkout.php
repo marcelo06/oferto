@@ -14,6 +14,12 @@ function activar_pago(tipo,otro){
 	jQuery("#datos_"+otro).hide();
 	
 }
+
+function activar_pago1(tipo,otro1, otro2){
+  $("#datos_"+tipo).show();
+  $("#datos_"+otro1).hide();
+  $("#datos_"+otro2).hide();
+}
 </script>
 </head>
 <body class="  checkout-onepage-index">
@@ -111,15 +117,22 @@ function activar_pago(tipo,otro){
 <div class="data-table opc" style="margin-top:3px;" >
 <div style=" padding:10px">
    Seleccione la forma de pago:<br>
-   <?=($emp['pago_payu']=='1') ? '<input type="radio" class="radio" title="Pago en linea" value="payu" name="metodo_pago" id="pago_payu" onClick="activar_pago(\'payu\',\'otro\')" required/><label for="pago_payu"> Pago en linea (PAYU) con tarjeta de crédito, debito, baloto... </label>&nbsp;':''?>
-  <?=($emp['pago_otro']=='1') ? '<input type="radio" class="radio" title="Pago en linea" value="otro" name="metodo_pago" id="pago_otro" onClick="activar_pago(\'otro\',\'payu\')" required/><label for="pago_otro"> Otros métodos de pago </label>':''?>
+                        
+            <?=($emp['pago_payu']=='1') ? '<div class="col-sm-8"><input type="radio" value="payu" name="metodo_pago" id="pago_payu" onClick="activar_pago1(\'payu\',\'otro\',\'iimoney\')" required/> <label style="font-weight:normal" for="pago_payu">Pago en linea (PAYU) con tarjeta de crédito, debito, baloto...</label></div>':''?>
+
+            <?=($emp['pago_payu']=='2') ? '<div class="col-sm-8"><input type="radio" value="ii-money" name="metodo_pago" id="pago_ii-money" onClick="activar_pago1(\'iimoney\',\'payu\',\'otro\')" required/> <label style="font-weight:normal" for="pago_payu">Pago en linea (ii-money) con tarjeta de debito</label></div>':''?>
+
+            <?=($emp['pago_otro']=='1') ? '<div class="col-sm-4"><input type="radio"  value="otro" name="metodo_pago" id="pago_otro" onClick="activar_pago1(\'otro\',\'payu\',\'iimoney\')" required/> <label style="font-weight:normal" for="pago_otro">Otros métodos de pago</label></div>':''?>
   
-  <div id="datos_payu" class="caja_pago">
-  <img src="<?=URLVISTA?>skin/comercio/skin/images/payu_logo.jpg" alt="Pagar con payu" />
-  </div>
-  <div id="datos_otro" class="caja_pago">
-  <p><?=$emp['otro_descripcion']?></p>
-  </div>
+            <div id="datos_payu" class="caja_pago">
+              <img src="<?=URLVISTA?>skin/comercio/skin/images/payu_logo.jpg" alt="Pagar con payu" />
+            </div>
+            <div id="datos_iimoney" class="caja_pago" ">
+              <img src="<?=URLVISTA?>images/ii-money-logo.png" alt="Pagar con ii-money" style="width: 200px" />
+            </div>
+            <div id="datos_otro" class="caja_pago">
+            <p><?=$emp['otro_descripcion']?></p>
+            </div>
 </div>
 </div>
 
@@ -170,7 +183,7 @@ function activar_pago(tipo,otro){
 
             </div>
 	        <!-- footer BOF -->
-<? include("includes/footer.php")?>
+<? include("includes/footer.php");?>
 <!-- footer EOF -->        </div>
             </div>
 </div>

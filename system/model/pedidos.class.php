@@ -290,7 +290,18 @@ class Pedidos extends ModelBase
 	return $this->db->result_array($qid);
 	}
 
-
+	/**
+	 * [actualizarEstado description]
+	 * @param  [type] $id     [description]
+	 * @param  [type] $estado [description]
+	 * @return [type]         [description]
+	 */
+	public function actualizarEstado($id, $estado)
+	{
+		$query = "UPDATE ".PEDIDOS." SET estado='$estado' WHERE id_pedido = $id";
+				
+		return $this->db->query($query);
+	}
 
 }
 
